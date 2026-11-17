@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trainingsplan</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Training">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#E4572E">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <h1 id="title">Trainingsplan</h1>
+    <button id="soundTest" class="small" type="button">🔊 Ton testen</button>
+  </div>
+  <nav id="tabs" aria-label="Abschnitte"></nav>
+</header>
+
+<main id="content"><p class="loading">Lade Plan …</p></main>
+
+<footer class="foot">
+  <span id="wakeStatus">Bildschirm-wach: inaktiv</span>
+  <span id="offStatus">Offline: –</span>
+</footer>
+
+<!-- Stummes Video in Schleife hält den Bildschirm wach, wo Wake Lock fehlt (HTTP). -->
+<video id="nosleep" src="nosleep.mp4" muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true"></video>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>

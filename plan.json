@@ -1,0 +1,647 @@
+{
+ "title": "6-Tage-Trainingsplan – Fettabbau & Muskelerhalt",
+ "version": 2,
+ "meta": [
+  {
+   "label": "Ziel",
+   "text": "Bauchfett reduzieren, Muskeln erhalten/aufbauen; Beweglichkeit verbessern (Hüfte und Beinrückseite)"
+  },
+  {
+   "label": "Dauer pro Einheit",
+   "text": "ca. 30 Minuten (inkl. Auf- und Abwärmen); Tag 1 mit Mobilitätsroutine ca. 35 Minuten"
+  },
+  {
+   "label": "Ausrüstung",
+   "text": "Crosstrainer Kettler Elyx 5, Ringe (Wintergarten); 2× 3-kg-Hanteln, Springseil, Körpergewicht (Arbeitszimmer)"
+  }
+ ],
+ "overview": [
+  {
+   "tag": "1",
+   "raum": "Arbeitszimmer",
+   "fokus": "Unterkörper & Gesäss (Hanteln + Körpergewicht) + Mobilität"
+  },
+  {
+   "tag": "2",
+   "raum": "Wintergarten",
+   "fokus": "Cardio Zone 2 (Crosstrainer) + Mobilität"
+  },
+  {
+   "tag": "3",
+   "raum": "Wintergarten",
+   "fokus": "Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)"
+  },
+  {
+   "tag": "4",
+   "raum": "Arbeitszimmer",
+   "fokus": "Springseil-HIIT + Core + Mobilität"
+  },
+  {
+   "tag": "5",
+   "raum": "Arbeitszimmer",
+   "fokus": "Oberkörper & Schultern (Hanteln + Körpergewicht)"
+  },
+  {
+   "tag": "6",
+   "raum": "Wintergarten",
+   "fokus": "Crosstrainer-HIIT"
+  },
+  {
+   "tag": "7",
+   "raum": "—",
+   "fokus": "Ruhetag + Mobilität (15 min), lockerer Spaziergang erlaubt"
+  }
+ ],
+ "sections": [
+  {
+   "id": "raum",
+   "title": "Raum-Aufteilung",
+   "items": [
+    {
+     "kind": "item",
+     "title": "Wintergarten – beim Crosstrainer",
+     "text": "Elyx 5 + Ringe (hoch, nur Hängen/Klimmzüge) → Cardio-, HIIT- und Klimmzug-Tage"
+    },
+    {
+     "kind": "item",
+     "title": "Arbeitszimmer – anderes Stockwerk",
+     "text": "Hanteln + Körpergewicht + Springseil"
+    },
+    {
+     "kind": "text",
+     "text": "Jeder Tag spielt vollständig in einem Raum. Kein Wechsel des Stockwerks während einer Einheit nötig."
+    }
+   ]
+  },
+  {
+   "id": "mob",
+   "title": "Mobilitätsroutine (ca. 10–12 min)",
+   "items": [
+    {
+     "kind": "text",
+     "text": "Ziel: Hüfte öffnen (bequemer Schneidersitz) und Beinrückseite verlängern (Fingerspitzen zum Boden). Statisches Dehnen am Ende des Trainings, wenn die Muskulatur warm ist. Jede Position ruhig halten, bis ein deutlicher, aber angenehmer Zug spürbar ist – kein Schmerz, nicht wippen. Langsam ausatmen und mit jedem Ausatmen etwas nachgeben. Unterlage: Matte oder Teppich. Wird an Tag 1, 2, 4 und 7 durchgeführt."
+    },
+    {
+     "kind": "item",
+     "title": "1. Schmetterling – Adduktoren & Hüfte (Butterfly Stretch)",
+     "text": "Aufrecht sitzen, Fusssohlen aneinander, Fersen möglichst nah zum Körper ziehen. Knie locker nach aussen sinken lassen und mit geradem Rücken leicht aus der Hüfte nach vorn neigen. Wird der Rücken rund, auf ein Kissen setzen. 2 × 45 Sekunden.",
+     "img": "Bilder/01_butterfly.png",
+     "timer": {
+      "type": "hold",
+      "sec": 45,
+      "sides": 1,
+      "rounds": 2,
+      "rest": 10
+     }
+    },
+    {
+     "kind": "item",
+     "title": "2. 90/90-Sitz – Hüftrotation (90/90 Hip Stretch)",
+     "text": "Vorderes Bein im 90°-Winkel quer vor dem Körper, hinteres Bein seitlich hinter dem Körper ebenfalls im 90°-Winkel. Aufrecht sitzen, Hände dürfen hinten abstützen. Oberkörper mit geradem Rücken leicht über das vordere Schienbein neigen. Trainiert genau die Aussenrotation, die der Schneidersitz verlangt. 45 Sekunden pro Seite.",
+     "img": "Bilder/02_9090.png",
+     "timer": {
+      "type": "hold",
+      "sec": 45,
+      "sides": 2,
+      "rounds": 1,
+      "rest": 10
+     }
+    },
+    {
+     "kind": "item",
+     "title": "3. Figur-4-Dehnung im Liegen – Gesäss (Supine Figure 4 Stretch)",
+     "text": "Rückenlage, rechten Knöchel auf das linke Knie legen. Linken Oberschenkel mit beiden Händen zur Brust ziehen, bis im rechten Gesäss ein Zug entsteht. Kopf und Schultern bleiben am Boden. 45 Sekunden pro Seite.",
+     "img": "Bilder/03_figure4.png",
+     "timer": {
+      "type": "hold",
+      "sec": 45,
+      "sides": 2,
+      "rounds": 1,
+      "rest": 10
+     }
+    },
+    {
+     "kind": "item",
+     "title": "4. Beinrückseite mit Springseil – Oberschenkelrückseite (Supine Hamstring Stretch with Strap)",
+     "text": "Rückenlage, Springseil (doppelt genommen) um den Fussballen eines Beins legen und das Bein gestreckt nach oben ziehen. Das andere Bein liegt gestreckt am Boden oder ist angewinkelt. Knie darf minimal gebeugt sein, Becken bleibt am Boden. 60 Sekunden pro Seite.",
+     "img": "Bilder/04_hamstring.png",
+     "timer": {
+      "type": "hold",
+      "sec": 60,
+      "sides": 2,
+      "rounds": 1,
+      "rest": 10
+     }
+    },
+    {
+     "kind": "item",
+     "title": "5. Kniende Hüftbeuger-Dehnung (Half-Kneeling Hip Flexor Stretch)",
+     "text": "Halbkniestand: ein Knie am Boden (weiche Unterlage), der andere Fuss steht vorn. Gesäss anspannen und das Becken leicht nach vorn schieben, Oberkörper aufrecht. Der Zug entsteht vorne an der Hüfte des hinteren Beins. 45 Sekunden pro Seite.",
+     "img": "Bilder/05_hipflexor.png",
+     "timer": {
+      "type": "hold",
+      "sec": 45,
+      "sides": 2,
+      "rounds": 1,
+      "rest": 10
+     }
+    },
+    {
+     "kind": "item",
+     "title": "6. Kniende Beinrückseiten-Dehnung (Half-Kneeling Hamstring Stretch)",
+     "text": "Direkt aus dem Halbkniestand von Übung 5, gleiche Seite: Becken nach hinten über das hintere Knie schieben, bis das vordere Bein gestreckt ist. Ferse bleibt am Boden, Fussspitze zeigt nach oben, Knie nicht durchdrücken. Hände auf den Oberschenkel oder neben dem Bein auf den Boden. Mit langem, geradem Rücken aus der Hüfte nach vorn neigen, bis die Beinrückseite zieht – nicht mit rundem Rücken zum Fuss greifen. Weiche Unterlage unter dem Knie. 45 Sekunden pro Seite.",
+     "img": "Bilder/05b_hamstring_kneel.png",
+     "timer": {
+      "type": "hold",
+      "sec": 45,
+      "sides": 2,
+      "rounds": 1,
+      "rest": 10
+     }
+    },
+    {
+     "kind": "item",
+     "title": "7. Vorbeuge mit gebeugten Knien – Abschluss (Ragdoll / Bent-Knee Forward Fold)",
+     "text": "Stehend, Füsse hüftbreit. Knie deutlich beugen und den Oberkörper hängen lassen, bis der Bauch auf den Oberschenkeln liegt und die Hände den Boden berühren. Nun die Knie langsam strecken, bis die Beinrückseite zieht – Bauch möglichst auf den Oberschenkeln lassen. 3 × 5 ruhige Atemzüge, danach langsam Wirbel für Wirbel aufrollen.",
+     "img": "Bilder/06_ragdoll.png",
+     "timer": {
+      "type": "hold",
+      "sec": 30,
+      "sides": 1,
+      "rounds": 3,
+      "rest": 10
+     }
+    }
+   ],
+   "sequence": 1
+  },
+  {
+   "id": "tag1",
+   "title": "Tag 1 – Arbeitszimmer – Unterkörper & Gesäss",
+   "items": [
+    {
+     "kind": "sub",
+     "text": "Hanteln + Körpergewicht"
+    },
+    {
+     "kind": "item",
+     "title": "Aufwärmen (3–4 min)",
+     "text": "Auf der Stelle marschieren, dazu locker die Arme schwingen, anschliessend Hüft- und Kniekreisen. Ziel ist, dass die grossen Bein- und Hüftgelenke warm und gut durchblutet sind.",
+     "timer": {
+      "type": "duration",
+      "sec": 180,
+      "tick": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "1. Goblet-Kniebeuge – mit Hantel",
+     "text": "Halte beide 3-kg-Hanteln zusammen vor der Brust (Ellbogen zeigen nach unten). Stelle die Füsse schulterbreit, Fussspitzen leicht nach aussen. Setze dich langsam nach hinten-unten, als würdest du dich auf einen Stuhl setzen, bis die Oberschenkel etwa parallel zum Boden sind. Knie bleiben über den Fussspitzen, Rücken gerade. Beim Hochkommen kräftig durch die Fersen drücken. 3 Sätze à 12–15 Wiederholungen.",
+     "img": "Bilder/k_goblet.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "2. Rückwärts-Ausfallschritte – mit Hanteln",
+     "text": "Je eine Hantel pro Hand, Arme hängen seitlich. Mache mit einem Bein einen kontrollierten Schritt nach hinten und senke das hintere Knie Richtung Boden, vorderes Knie über dem Fuss. Wieder hochdrücken. 3 Sätze à 10 Wiederholungen pro Bein.",
+     "img": "Bilder/k_revlunge.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "3. Glute Bridge (Beckenheben) – Körpergewicht, optional mit Hantel",
+     "text": "Lege dich auf den Rücken, Knie angewinkelt, Füsse flach auf dem Boden. Drücke die Hüfte nach oben, bis Oberschenkel und Oberkörper eine Linie bilden, und spanne oben das Gesäss fest an. Langsam absenken. Zur Steigerung kannst du eine Hantel auf das Becken legen und mit den Händen halten. 3 Sätze à 15 Wiederholungen.",
+     "img": "Bilder/k_bridge.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "4. Wadenheben – mit Hanteln",
+     "text": "Stehe aufrecht, je eine Hantel in jeder Hand, und drücke dich langsam auf die Fussballen hoch, kurz halten, kontrolliert absenken. Bei Bedarf mit den Fingerspitzen leicht an der Wand abstützen. 3 Sätze à 15–20 Wiederholungen.",
+     "img": "Bilder/k_calf.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "5. Plank (Unterarmstütz) – Körpergewicht",
+     "text": "Unterarme und Fussspitzen am Boden, Körper bildet eine gerade Linie von Kopf bis Ferse. Bauch und Gesäss anspannen, nicht ins Hohlkreuz fallen. Ruhig weiteratmen. 3 Sätze à 30–45 Sekunden.",
+     "img": "Bilder/k_plank.png",
+     "timer": {
+      "type": "hold",
+      "sec": 30,
+      "sides": 1,
+      "rounds": 3,
+      "rest": 45
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Abwärmen (10–12 min)",
+     "text": "Mobilitätsroutine (siehe oben).",
+     "link": "mob"
+    }
+   ]
+  },
+  {
+   "id": "tag2",
+   "title": "Tag 2 – Wintergarten – Cardio Zone 2",
+   "items": [
+    {
+     "kind": "sub",
+     "text": "Crosstrainer Elyx 5"
+    },
+    {
+     "kind": "itemtext",
+     "text": "Trainiere gleichmässig in einem lockeren \"Wohlfühl-Tempo\" (ca. 65–70 % der maximalen Herzfrequenz). Du solltest dich dabei noch unterhalten können. Wähle einen Widerstand, bei dem du diese Intensität sauber 20 Minuten durchhältst, ohne ausser Atem zu geraten.",
+     "img": "Bilder/k_cross.png",
+     "timer": {
+      "type": "duration",
+      "sec": 1200,
+      "tick": 300
+     }
+    },
+    {
+     "kind": "text",
+     "text": "Genau in diesem Bereich nutzt der Körper besonders viel Fett als Energiequelle, und die Belastung ist gelenk- und herzschonend. Beginne die ersten 2–3 Minuten locker zum Aufwärmen und rolle die letzten 2 Minuten ruhig aus."
+    },
+    {
+     "kind": "item",
+     "title": "Danach (10–12 min)",
+     "text": "Mobilitätsroutine (siehe oben). Nach dem Crosstrainer ist die Muskulatur warm – ideal zum Dehnen.",
+     "link": "mob"
+    },
+    {
+     "kind": "sub",
+     "text": "Alternative: An schönen Tagen kannst du diesen Tag durch eine Radtour im selben lockeren Tempo ersetzen."
+    }
+   ]
+  },
+  {
+   "id": "tag3",
+   "title": "Tag 3 – Wintergarten – Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)",
+   "items": [
+    {
+     "kind": "sub",
+     "text": "Ringe (hoch, nur Hängen/Klimmzüge) + Crosstrainer + Körpergewicht"
+    },
+    {
+     "kind": "item",
+     "title": "Aufwärmen (4 min)",
+     "text": "Locker am Crosstrainer, geringer Widerstand, um den ganzen Körper warmzubekommen.",
+     "timer": {
+      "type": "duration",
+      "sec": 240,
+      "tick": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "1. Negativ-Klimmzüge / Unterstützte Klimmzüge",
+     "text": "Greife die Ringe von unten (Untergriff) oder oben (Übergriff). Hilf mit den Beinen vom Boden ab, um dich hochzuziehen bis das Kinn auf Ringhöhe ist. Alternativ: nur die langsame Absenk-Phase (3–4 Sekunden) trainieren – Beine helfen hoch, dann kontrolliert absenken. Das stärkt oberen Rücken und Arme effektiv. 3 Sätze à 5–8 Wiederholungen.",
+     "img": "Bilder/k_pullup.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "2. Hängende Knieheber",
+     "text": "An den Ringen hängen, Schultern aktiv nach unten ziehen (nicht durchhängen). Ziehe beide Knie langsam zur Brust, kurz halten, kontrolliert absenken. Trainiert Core und Hüftbeuger. 3 Sätze à 8–12 Wiederholungen.",
+     "img": "Bilder/k_kneeraise.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "3. Schulterblatt-Zug (Scapular Pull)",
+     "text": "An den Ringen hängen, Arme gestreckt. Ziehe nur die Schulterblätter nach unten zusammen, ohne die Ellbogen zu beugen – der Körper hebt sich dadurch leicht. Kurz halten, zurück. Aktiviert die Schulterblatt-Stabilisatoren und bereitet auf echte Klimmzüge vor. 3 Sätze à 10 Wiederholungen.",
+     "img": "Bilder/k_scap.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "4. Liegestütze (Körpergewicht, am Boden)",
+     "text": "Hände etwas breiter als schulterbreit, Körper in gerader Linie. Brust langsam zum Boden absenken, kraftvoll hochdrücken. Falls nötig: Knie auf dem Boden als Erleichterung. 3 Sätze à 8–12 Wiederholungen.",
+     "img": "Bilder/k_pushup.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "5. Ausfallschritte (Körpergewicht)",
+     "text": "Aufrecht stehen, einen Schritt nach vorn, vorderes Knie über dem Fuss absenken bis das hintere Knie fast den Boden berührt, zurückdrücken. Abwechselnd links/rechts. 3 Sätze à 10 Wiederholungen pro Bein.",
+     "img": "Bilder/k_lunge.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "6. Plank",
+     "text": "Zum Abschluss als Core-Übung. 2 Sätze à 30–45 Sekunden.",
+     "img": "Bilder/k_plank.png",
+     "timer": {
+      "type": "hold",
+      "sec": 30,
+      "sides": 1,
+      "rounds": 2,
+      "rest": 45
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Abwärmen (2 min)",
+     "text": "Locker ausschütteln, Schultern und Brust dehnen.",
+     "timer": {
+      "type": "duration",
+      "sec": 120,
+      "tick": 60
+     }
+    }
+   ]
+  },
+  {
+   "id": "tag4",
+   "title": "Tag 4 – Arbeitszimmer – Springseil-HIIT + Core",
+   "items": [
+    {
+     "kind": "sub",
+     "text": "Springseil + Körpergewicht"
+    },
+    {
+     "kind": "item",
+     "title": "Aufwärmen (3 min)",
+     "text": "Locker auf der Stelle springen oder marschieren, Hand- und Fussgelenke kreisen.",
+     "timer": {
+      "type": "duration",
+      "sec": 180,
+      "tick": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Hauptteil – Springseil-Block (Seconds Pro)",
+     "text": "40 Sekunden springen / 60 Sekunden Pause × 5 Runden. Springe in ruhigem, gleichmässigem Rhythmus, locker aus den Fussgelenken, Ellbogen nah am Körper. Wenn du dich am Seil verhedderst, einfach weitermachen – wichtig ist die Bewegungszeit. Steigerung: erst auf 6–8 Runden erhöhen, später die Pause auf 45 s verkürzen.",
+     "img": "Bilder/k_rope.png",
+     "timer": {
+      "type": "interval",
+      "work": 40,
+      "rest": 60,
+      "rounds": 5
+     }
+    },
+    {
+     "kind": "heading",
+     "text": "Core-Block (1–2 Runden)"
+    },
+    {
+     "kind": "item",
+     "title": "Beinheben im Liegen",
+     "text": "Auf dem Rücken liegend Beine gestreckt langsam anheben und absenken, ohne dass die Fersen den Boden berühren. Unteren Rücken am Boden lassen. 2 Sätze à 12.",
+     "img": "Bilder/k_legraise.png",
+     "timer": {
+      "type": "sets",
+      "sets": 2,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Bicycle Crunches",
+     "text": "Im Liegen abwechselnd Ellbogen zum gegenüberliegenden Knie führen, anderes Bein strecken. 2 Sätze à 20 (gesamt).",
+     "img": "Bilder/k_bicycle.png",
+     "timer": {
+      "type": "sets",
+      "sets": 2,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Seitlicher Unterarmstütz (Side Plank)",
+     "text": "Auf einem Unterarm seitlich abstützen, Körper gerade. Je Seite 20–30 Sekunden.",
+     "img": "Bilder/k_sideplank.png",
+     "timer": {
+      "type": "hold",
+      "sec": 20,
+      "sides": 2,
+      "rounds": 1,
+      "rest": 10
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Abwärmen (10–12 min)",
+     "text": "Kurz locker gehen, dann Mobilitätsroutine (siehe oben).",
+     "link": "mob"
+    }
+   ]
+  },
+  {
+   "id": "tag5",
+   "title": "Tag 5 – Arbeitszimmer – Oberkörper & Schultern",
+   "items": [
+    {
+     "kind": "sub",
+     "text": "Hanteln + Körpergewicht"
+    },
+    {
+     "kind": "item",
+     "title": "Aufwärmen (3 min)",
+     "text": "Arme kreisen, Schultern lockern, leichtes Marschieren.",
+     "timer": {
+      "type": "duration",
+      "sec": 180,
+      "tick": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "1. Schulterdrücken – mit Hanteln",
+     "text": "Stehend oder sitzend, je eine Hantel in jeder Hand auf Schulterhöhe, Handflächen nach vorn. Drücke die Hanteln kontrolliert nach oben, bis die Arme fast gestreckt sind, dann langsam absenken. Bauch leicht anspannen, kein Hohlkreuz. 3 Sätze à 12–15 Wiederholungen.",
+     "img": "Bilder/k_press.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "2. Liegestütze (erhöht) – Körpergewicht",
+     "text": "Hände auf einer stabilen erhöhten Fläche (z. B. Tischkante), Körper gerade, Brust langsam absenken und hochdrücken. Die Erhöhung macht die Übung gelenkschonender. 3 Sätze à 8–12 Wiederholungen.",
+     "img": "Bilder/k_inclinepush.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "3. Einarmiges Rudern – mit Hantel",
+     "text": "Schrittstellung: ein Bein vorn, leicht gebeugt, das andere hinten. Oberkörper mit geradem Rücken aus der Hüfte nach vorn neigen und die Hand der vorderen Seite auf dem vorderen Oberschenkel abstützen. Hantel in der freien Hand hängen lassen und eng am Körper nach oben zur Hüfte ziehen, Schulterblatt zurückführen, langsam ablassen. Alternative: statt auf dem Oberschenkel die Hand auf Schreibtischkante oder Fensterbrett abstützen. 3 Sätze à 12 pro Arm.",
+     "img": "Bilder/k_row.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "4. Seitheben – mit Hanteln",
+     "text": "Aufrecht stehen, je eine Hantel in jeder Hand, Arme leicht gebeugt. Hebe die Arme seitlich bis auf Schulterhöhe (wie Flügel), kurz halten, langsam senken. 3 Sätze à 15 Wiederholungen.",
+     "img": "Bilder/k_lateral.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "5. Bizeps-Curls – mit Hanteln",
+     "text": "Je eine Hantel pro Hand, Oberarme am Körper fixiert, Hanteln zu den Schultern beugen, langsam absenken. 3 Sätze à 12–15 Wiederholungen.",
+     "img": "Bilder/k_curl.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "6. Trizeps-Strecken über Kopf – mit Hantel",
+     "text": "Eine Hantel mit beiden Händen über dem Kopf halten, Ellbogen zeigen nach vorn. Unterarme hinter den Kopf absenken und wieder strecken. Oberarme ruhig halten. 3 Sätze à 12–15 Wiederholungen.",
+     "img": "Bilder/k_triceps.png",
+     "timer": {
+      "type": "sets",
+      "sets": 3,
+      "rest": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Abwärmen (2 min)",
+     "text": "Schultern, Brust und Arme dehnen.",
+     "timer": {
+      "type": "duration",
+      "sec": 120,
+      "tick": 60
+     }
+    }
+   ]
+  },
+  {
+   "id": "tag6",
+   "title": "Tag 6 – Wintergarten – Crosstrainer-HIIT",
+   "items": [
+    {
+     "kind": "sub",
+     "text": "Crosstrainer Elyx 5"
+    },
+    {
+     "kind": "item",
+     "title": "Aufwärmen (5 min)",
+     "text": "Locker bei geringem Widerstand einrollen, bis du leicht ins Schwitzen kommst.",
+     "timer": {
+      "type": "duration",
+      "sec": 300,
+      "tick": 60
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Hauptteil – Intervalle (ca. 18–20 min)",
+     "text": "8–10 × [30 Sekunden zügig / 75 Sekunden locker]. In den 30 Sekunden erhöhst du Widerstand und/oder Tempo so, dass es anstrengend, aber kontrolliert bleibt (du solltest nicht mehr sprechen können). In den 75 Sekunden fährst du ganz locker weiter zur Erholung. Beginne mit 8 Runden und steigere dich über die Wochen auf 10.",
+     "img": "Bilder/k_cross.png",
+     "timer": {
+      "type": "interval",
+      "work": 30,
+      "rest": 75,
+      "rounds": 8
+     }
+    },
+    {
+     "kind": "item",
+     "title": "Abwärmen (5 min)",
+     "text": "Ganz ruhig ausrollen, damit der Puls langsam sinkt.",
+     "timer": {
+      "type": "duration",
+      "sec": 300,
+      "tick": 60
+     }
+    }
+   ]
+  },
+  {
+   "id": "tag7",
+   "title": "Tag 7 – Ruhetag",
+   "items": [
+    {
+     "kind": "text",
+     "text": "Kein strukturiertes Training. Ein lockerer Spaziergang oder eine ganz ruhige, kurze Radrunde fördern die Erholung. Erholung ist der Teil, in dem die Muskeln tatsächlich kräftiger werden – also bewusst gönnen."
+    },
+    {
+     "kind": "item",
+     "title": "Mobilität (ca. 15 min)",
+     "text": "Mobilitätsroutine (siehe oben) in ruhigem Tempo, jede Position 2 × halten. Ideal nach dem Spaziergang.",
+     "link": "mob",
+     "sequence": 2
+    }
+   ]
+  },
+  {
+   "id": "alltag",
+   "title": "Beweglichkeit – Alltag & Fortschritt",
+   "items": [
+    {
+     "kind": "item",
+     "title": "Schneidersitz im Alltag",
+     "text": "Täglich 5–10 Minuten im Schneidersitz sitzen, z. B. beim Lesen oder Fernsehen. Anfangs auf ein festes Kissen oder gefaltetes Tuch setzen, sodass das Becken höher als die Knie ist – so kippt das Becken nicht nach hinten und der Rücken bleibt aufrecht. Die Unterlage über die Wochen schrittweise niedriger machen."
+    },
+    {
+     "kind": "item",
+     "title": "Test alle 4 Wochen",
+     "text": "Immer zur gleichen Tageszeit nach kurzem Aufwärmen. (1) Finger-Boden-Abstand: stehend, Knie gestreckt, langsam vorbeugen, Abstand Fingerspitzen–Boden in cm messen. (2) Schneidersitz ohne Kissen: Abstand Knie–Boden in cm messen (links/rechts). Werte notieren."
+    },
+    {
+     "kind": "item",
+     "title": "Erwartung",
+     "text": "Beweglichkeit verbessert sich langsam. Bei regelmässigem Dehnen (4× pro Woche + Alltagsgewohnheit) sind erste Fortschritte meist nach einigen Wochen spürbar, deutliche nach etwa 2–3 Monaten. Regelmässigkeit zählt mehr als Intensität."
+    }
+   ]
+  }
+ ]
+}
