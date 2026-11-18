@@ -4,7 +4,7 @@
  "meta": [
   {
    "label": "Ziel",
-   "text": "Bauchfett reduzieren, Muskeln erhalten/aufbauen; Beweglichkeit verbessern (Hüfte und Beinrückseite)"
+   "text": "Bauchfett reduzieren, Muskeln erhalten/aufbauen; Beweglichkeit verbessern (Übungen für Vielsitzer)"
   },
   {
    "label": "Dauer pro Einheit",
@@ -12,7 +12,7 @@
   },
   {
    "label": "Ausrüstung",
-   "text": "Crosstrainer Kettler Elyx 5, Ringe (Wintergarten); 2× 3-kg-Hanteln, Springseil, Körpergewicht (Arbeitszimmer)"
+   "text": "Crosstrainer, Ringe (Gartenraum); 2× 3-kg-Hanteln, Springseil, Yogagurt, Körpergewicht (Arbeitszimmer)"
   }
  ],
  "overview": [
@@ -23,12 +23,12 @@
   },
   {
    "tag": "2",
-   "raum": "Wintergarten",
+   "raum": "Gartenraum",
    "fokus": "Cardio Zone 2 (Crosstrainer) + Mobilität"
   },
   {
    "tag": "3",
-   "raum": "Wintergarten",
+   "raum": "Gartenraum",
    "fokus": "Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)"
   },
   {
@@ -43,7 +43,7 @@
   },
   {
    "tag": "6",
-   "raum": "Wintergarten",
+   "raum": "Gartenraum",
    "fokus": "Crosstrainer-HIIT"
   },
   {
@@ -59,13 +59,13 @@
    "items": [
     {
      "kind": "item",
-     "title": "Wintergarten – beim Crosstrainer",
-     "text": "Elyx 5 + Ringe (hoch, nur Hängen/Klimmzüge) → Cardio-, HIIT- und Klimmzug-Tage"
+     "title": "Gartenraum – beim Crosstrainer",
+     "text": "Crosstrainer + Ringe (hoch, nur Hängen/Klimmzüge) → Cardio-, HIIT- und Klimmzug-Tage"
     },
     {
      "kind": "item",
      "title": "Arbeitszimmer – anderes Stockwerk",
-     "text": "Hanteln + Körpergewicht + Springseil"
+     "text": "Hanteln + Körpergewicht + Springseil + Yogagurt"
     },
     {
      "kind": "text",
@@ -122,8 +122,8 @@
     },
     {
      "kind": "item",
-     "title": "4. Beinrückseite mit Springseil – Oberschenkelrückseite (Supine Hamstring Stretch with Strap)",
-     "text": "Rückenlage, Springseil (doppelt genommen) um den Fussballen eines Beins legen und das Bein gestreckt nach oben ziehen. Das andere Bein liegt gestreckt am Boden oder ist angewinkelt. Knie darf minimal gebeugt sein, Becken bleibt am Boden. 60 Sekunden pro Seite.",
+     "title": "4. Beinrückseite mit Yogagurt – Oberschenkelrückseite (Supine Hamstring Stretch with Strap)",
+     "text": "Rückenlage, Yogagurt um den Fussballen eines Beins legen und das Bein gestreckt nach oben ziehen. Das andere Bein liegt gestreckt am Boden oder ist angewinkelt. Knie darf minimal gebeugt sein, Becken bleibt am Boden. 60 Sekunden pro Seite.",
      "img": "Bilder/04_hamstring.png",
      "timer": {
       "type": "hold",
@@ -260,11 +260,11 @@
   },
   {
    "id": "tag2",
-   "title": "Tag 2 – Wintergarten – Cardio Zone 2",
+   "title": "Tag 2 – Gartenraum – Cardio Zone 2",
    "items": [
     {
      "kind": "sub",
-     "text": "Crosstrainer Elyx 5"
+     "text": "Crosstrainer"
     },
     {
      "kind": "itemtext",
@@ -294,7 +294,7 @@
   },
   {
    "id": "tag3",
-   "title": "Tag 3 – Wintergarten – Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)",
+   "title": "Tag 3 – Gartenraum – Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)",
    "items": [
     {
      "kind": "sub",
@@ -565,11 +565,11 @@
   },
   {
    "id": "tag6",
-   "title": "Tag 6 – Wintergarten – Crosstrainer-HIIT",
+   "title": "Tag 6 – Gartenraum – Crosstrainer-HIIT",
    "items": [
     {
      "kind": "sub",
-     "text": "Crosstrainer Elyx 5"
+     "text": "Crosstrainer"
     },
     {
      "kind": "item",
