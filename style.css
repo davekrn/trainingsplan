@@ -98,3 +98,12 @@ table.ov{ width:100%; border-collapse:collapse; background:var(--card); border-r
   .item img{ width:3cm; height:3cm; grid-row:span 2; }
   .item .txt{ grid-column:auto; }
 }
+
+/* About (README) */
+.about blockquote{ margin:12px 0; padding:8px 12px; border-left:4px solid var(--accent); background:var(--card); border-radius:0 8px 8px 0; }
+.about code{ font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.88em; background:var(--card); border:1px solid var(--line); border-radius:4px; padding:0 4px; }
+.about table.md{ margin:8px 0 16px; }
+.about ul,.about ol{ padding-left:1.3em; }
+.about li{ margin:3px 0; }
+.about a{ color:var(--accent); overflow-wrap:anywhere; }
+@media print{ .about{ display:none !important; } }

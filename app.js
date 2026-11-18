@@ -305,11 +305,51 @@ function renderItem(it, key, secId) {
   if (secId === 'mob' && it.timer) MOB_KEYS.push(key);
   return card;
 }
+/* ---------- About: README.md als einfache Markdown-Ansicht ---------- */
+function mdInline(t) {
+  return esc(t)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<i>$2</i>')
+    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    .replace(/(^|[\s(])(https?:\/\/[^\s<)]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+}
+function mdToHtml(src) {
+  const L = src.replace(/\r/g, '').split('\n'); let h = '', i = 0;
+  const cells = r => r.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+  while (i < L.length) {
+    const l = L[i];
+    if (!l.trim()) { i++; continue; }
+    let m;
+    if ((m = l.match(/^(#{1,4})\s+(.*)/))) { const n = Math.min(m[1].length + 1, 4); h += `<h${n}>${mdInline(m[2])}</h${n}>`; i++; continue; }
+    if (l.startsWith('>')) { let q = []; while (i < L.length && L[i].startsWith('>')) q.push(L[i++].replace(/^>\s?/, '')); h += `<blockquote>${mdInline(q.join(' '))}</blockquote>`; continue; }
+    if (l.trim().startsWith('|') && /^\s*\|?\s*:?-/.test(L[i + 1] || '')) {
+      h += '<table class="ov md"><thead><tr>' + cells(l).map(c => `<th>${mdInline(c)}</th>`).join('') + '</tr></thead><tbody>'; i += 2;
+      while (i < L.length && L[i].trim().startsWith('|')) h += '<tr>' + cells(L[i++]).map(c => `<td>${mdInline(c)}</td>`).join('') + '</tr>';
+      h += '</tbody></table>'; continue;
+    }
+    if (/^\s*([-*]|\d+\.)\s/.test(l)) {
+      const tag = /^\s*\d+\./.test(l) ? 'ol' : 'ul'; h += `<${tag}>`;
+      while (i < L.length && /^\s*([-*]|\d+\.)\s/.test(L[i])) h += `<li>${mdInline(L[i++].replace(/^\s*([-*]|\d+\.)\s+/, ''))}</li>`;
+      h += `</${tag}>`; continue;
+    }
+    let p = []; while (i < L.length && L[i].trim() && !/^(#|>|\||\s*([-*]|\d+\.)\s)/.test(L[i])) p.push(L[i++]);
+    h += `<p>${mdInline(p.join(' '))}</p>`;
+  }
+  return h;
+}
+function renderAbout(sec) {
+  fetch('README.md')
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(t => { sec.innerHTML = mdToHtml(t); })
+    .catch(() => { sec.innerHTML = '<h2>About</h2><p>README.md konnte nicht geladen werden.</p>'; });
+}
 const TABS = [];
 function tabLabel(s) {
   if (s.id === 'start') return 'Übersicht';
   if (s.id === 'mob') return 'Mobilität';
   if (s.id === 'alltag') return 'Alltag';
+  if (s.id === 'about') return 'About';
   const m = s.id.match(/^tag(\d)$/); return m ? 'Tag ' + m[1] : s.title;
 }
 function showTab(id) {
@@ -362,6 +402,8 @@ function render(plan) {
     });
     main.append(sec);
   });
+  const about = el('section', 'about'); about.id = 'about';
+  main.append(about); secs.push({ id: 'about' }); renderAbout(about);
   secs.forEach(s => {
     const b = el('button', null, tabLabel(s)); b.type = 'button'; b.dataset.id = s.id;
     b.addEventListener('click', () => showTab(s.id));

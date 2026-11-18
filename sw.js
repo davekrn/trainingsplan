@@ -1,8 +1,8 @@
 /* Service Worker – macht den Trainingsplan offline verfügbar.
    Nach JEDER Änderung an Dateien (plan.json, Bilder, app.js, style.css …) VERSION erhöhen,
    sonst behält das iPhone die alte Fassung. */
-const VERSION = 'tp-4';
-const STATIC = ['./', 'index.html', 'app.js', 'style.css', 'plan.json', 'icon.png', 'nosleep.mp4', 'manifest.json'];
+const VERSION = 'tp-5';
+const STATIC = ['./', 'index.html', 'app.js', 'style.css', 'plan.json', 'icon.png', 'nosleep.mp4', 'manifest.json', 'README.md'];
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {
