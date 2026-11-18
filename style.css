@@ -110,3 +110,7 @@ table.ov{ width:100%; border-collapse:collapse; background:var(--card); border-r
 ul.meta{ margin:2px 0 10px; padding-left:1.3em; }
 ul.meta li{ margin:2px 0; }
 ul.meta b{ font-weight:600; }
+.about h2.withlang{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.about .lang{ display:inline-flex; gap:4px; flex-shrink:0; }
+.about .lang button{ min-width:2.4em; font-weight:600; }
+.about .lang button.on{ background:var(--accent); color:#fff; border-color:var(--accent); }

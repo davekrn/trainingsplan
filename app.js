@@ -338,11 +338,26 @@ function mdToHtml(src) {
   }
   return h;
 }
-function renderAbout(sec) {
-  fetch('README.md')
+function renderAbout(sec, lang) {
+  lang = lang || store.get('aboutLang', 'en');
+  const file = lang === 'de' ? 'README.de.md' : 'README.md';
+  fetch(file)
     .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
     .then(t => { sec.innerHTML = mdToHtml(t); })
-    .catch(() => { sec.innerHTML = '<h2>About</h2><p>README.md konnte nicht geladen werden.</p>'; });
+    .catch(() => { sec.innerHTML = `<h2>About</h2><p>${file} konnte nicht geladen werden.</p>`; })
+    .finally(() => {
+      // Sprachwahl E/D rechts neben dem Titel
+      let h = sec.querySelector('h2'); if (!h) { h = el('h2', null, 'About'); sec.prepend(h); }
+      h.classList.add('withlang');
+      const sw = el('span', 'lang');
+      [['en', 'E', 'English'], ['de', 'D', 'Deutsch']].forEach(([k, lbl, ttl]) => {
+        const b = el('button', 'small' + (k === lang ? ' on' : ''), lbl); b.type = 'button'; b.title = ttl;
+        b.setAttribute('aria-pressed', k === lang);
+        b.addEventListener('click', () => { if (k !== lang) { store.set('aboutLang', k); renderAbout(sec, k); } });
+        sw.append(b);
+      });
+      h.append(sw);
+    });
 }
 const TABS = [];
 function tabLabel(s) {

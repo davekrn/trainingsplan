@@ -28,6 +28,7 @@ Plain HTML, CSS and JavaScript – no framework, no build step, no server-side c
 | `sw.js` | Service worker for offline use |
 | `manifest.json`, `icon.png` | Web app manifest (name, icon, full-screen start) |
 | `nosleep.mp4` | Fallback to keep the screen on in older iOS versions |
+| `README.md`, `README.de.md` | This text (English/German), also shown in the “About” tab |
 | `Bilder/` | Exercise illustrations |
 
 Hosted for free on **GitHub Pages** directly from this repository.
@@ -56,7 +57,7 @@ On Android, Chrome offers *Install app* / *Add to Home screen* in the menu; on a
 The cache only refreshes when the service worker changes. So for every update:
 
 1. Edit the files (usually just `plan.json`).
-2. Increase `VERSION` in `sw.js` (e.g. `tp-4` → `tp-5`).
+2. Increase `VERSION` in `sw.js` (e.g. `tp-7` → `tp-8`).
 3. Upload the changed files to this repository (*Add file → Upload files → Commit changes*).
 4. Wait 1–2 minutes for GitHub Pages, then open the app once **with** a connection, close it and open it again.
 
