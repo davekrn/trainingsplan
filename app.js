@@ -370,7 +370,12 @@ function render(plan) {
   // Übersicht = Kopfangaben + Raum-Aufteilung + Wochentabelle
   const start = el('section'); start.id = 'start';
   start.append(el('h2', null, 'Übersicht'));
-  plan.meta.forEach(m => start.append(el('p', 'meta', `<b>${esc(m.label)}:</b> ${esc(m.text)}`)));
+  plan.meta.forEach(m => {
+    if (m.list) {
+      start.append(el('p', 'meta', `<b>${esc(m.label)}:</b>`));
+      start.append(el('ul', 'meta', m.list.map(x => `<li><b>${esc(x.label)}:</b> ${esc(x.text)}</li>`).join('')));
+    } else start.append(el('p', 'meta', `<b>${esc(m.label)}:</b> ${esc(m.text)}`));
+  });
   const tbl = el('table', 'ov');
   tbl.innerHTML = '<thead><tr><th>Tag</th><th>Raum</th><th>Schwerpunkt</th></tr></thead>';
   const tb = el('tbody');
@@ -381,8 +386,6 @@ function render(plan) {
   });
   tbl.append(tb);
   start.append(el('h3', null, 'Wochenübersicht'), tbl);
-  const raum = plan.sections.find(s => s.id === 'raum');
-  if (raum) { start.append(el('h3', null, 'Raum-Aufteilung')); raum.items.forEach((it, n) => start.append(renderItem(it, 'raum' + n, 'raum'))); }
   main.append(start);
 
   const secs = [{ id: 'start' }, ...plan.sections.filter(s => s.id !== 'raum')];

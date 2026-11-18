@@ -107,3 +107,6 @@ table.ov{ width:100%; border-collapse:collapse; background:var(--card); border-r
 .about li{ margin:3px 0; }
 .about a{ color:var(--accent); overflow-wrap:anywhere; }
 @media print{ .about{ display:none !important; } }
+ul.meta{ margin:2px 0 10px; padding-left:1.3em; }
+ul.meta li{ margin:2px 0; }
+ul.meta b{ font-weight:600; }

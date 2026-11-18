@@ -12,7 +12,16 @@
   },
   {
    "label": "Ausrüstung",
-   "text": "Crosstrainer, Ringe (Gartenraum); 2× 3-kg-Hanteln, Springseil, Yogagurt, Körpergewicht (Arbeitszimmer)"
+   "list": [
+    {
+     "label": "Gartenraum",
+     "text": "Crosstrainer, Ringe"
+    },
+    {
+     "label": "Arbeitszimmer",
+     "text": "Fitnessmatte, 2× 3-kg-Hanteln, Springseil, Yogagurt"
+    }
+   ]
   }
  ],
  "overview": [
@@ -53,26 +62,6 @@
   }
  ],
  "sections": [
-  {
-   "id": "raum",
-   "title": "Raum-Aufteilung",
-   "items": [
-    {
-     "kind": "item",
-     "title": "Gartenraum – beim Crosstrainer",
-     "text": "Crosstrainer + Ringe (hoch, nur Hängen/Klimmzüge) → Cardio-, HIIT- und Klimmzug-Tage"
-    },
-    {
-     "kind": "item",
-     "title": "Arbeitszimmer – anderes Stockwerk",
-     "text": "Hanteln + Körpergewicht + Springseil + Yogagurt"
-    },
-    {
-     "kind": "text",
-     "text": "Jeder Tag spielt vollständig in einem Raum. Kein Wechsel des Stockwerks während einer Einheit nötig."
-    }
-   ]
-  },
   {
    "id": "mob",
    "title": "Mobilitätsroutine (ca. 10–12 min)",
