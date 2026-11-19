@@ -8,7 +8,7 @@
   },
   {
    "label": "Dauer pro Einheit",
-   "text": "ca. 30 Minuten (inkl. Auf- und Abwärmen); Tag 1 mit Mobilitätsroutine ca. 35 Minuten"
+   "text": "ca. 30 Minuten (inkl. Auf- und Abwärmen); Montag mit Mobilitätsroutine ca. 35 Minuten"
   },
   {
    "label": "Ausrüstung",
@@ -28,37 +28,44 @@
   {
    "tag": "1",
    "raum": "Arbeitszimmer",
-   "fokus": "Unterkörper & Gesäss (Kettlebell + Hanteln + Körpergewicht) + Mobilität"
+   "fokus": "Unterkörper-Kraft & Stabilität (Kettlebell + Hanteln + Körpergewicht) + Mobilität",
+   "name": "Mo"
   },
   {
    "tag": "2",
    "raum": "Gartenraum",
-   "fokus": "Cardio Zone 2 (Crosstrainer) + Mobilität"
+   "fokus": "Cardio Zone 2 (Crosstrainer) + Mobilität",
+   "name": "Di"
   },
   {
    "tag": "3",
    "raum": "Gartenraum",
-   "fokus": "Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)"
+   "fokus": "Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)",
+   "name": "Mi"
   },
   {
    "tag": "4",
    "raum": "Arbeitszimmer",
-   "fokus": "Springseil-HIIT + Core + Mobilität"
+   "fokus": "Springseil-HIIT + Core + Mobilität",
+   "name": "Do"
   },
   {
    "tag": "5",
    "raum": "Arbeitszimmer",
-   "fokus": "Oberkörper & Schultern (Hanteln + Kettlebell + Körpergewicht)"
+   "fokus": "Oberkörper & Schultern (Hanteln + Kettlebell + Körpergewicht)",
+   "name": "Fr"
   },
   {
    "tag": "6",
    "raum": "Gartenraum",
-   "fokus": "Crosstrainer-HIIT"
+   "fokus": "Crosstrainer-HIIT",
+   "name": "Sa"
   },
   {
    "tag": "7",
    "raum": "—",
-   "fokus": "Ruhetag + Mobilität (15 min), lockerer Spaziergang erlaubt"
+   "fokus": "Ruhetag + Mobilität (15 min)",
+   "name": "So"
   }
  ],
  "sections": [
@@ -68,7 +75,7 @@
    "items": [
     {
      "kind": "text",
-     "text": "Ziel: Hüfte öffnen (bequemer Schneidersitz) und Beinrückseite verlängern (Fingerspitzen zum Boden). Statisches Dehnen am Ende des Trainings, wenn die Muskulatur warm ist. Jede Position ruhig halten, bis ein deutlicher, aber angenehmer Zug spürbar ist – kein Schmerz, nicht wippen. Langsam ausatmen und mit jedem Ausatmen etwas nachgeben. Unterlage: Matte oder Teppich. Wird an Tag 1, 2, 4 und 7 durchgeführt."
+     "text": "Ziel: Hüfte öffnen (bequemer Schneidersitz) und Beinrückseite verlängern (Fingerspitzen zum Boden). Statisches Dehnen am Ende des Trainings, wenn die Muskulatur warm ist. Jede Position ruhig halten, bis ein deutlicher, aber angenehmer Zug spürbar ist – kein Schmerz, nicht wippen. Langsam ausatmen und mit jedem Ausatmen etwas nachgeben. Unterlage: Matte oder Teppich. Wird am Montag, Dienstag, Donnerstag und Sonntag durchgeführt."
     },
     {
      "kind": "item",
@@ -166,7 +173,7 @@
   },
   {
    "id": "tag1",
-   "title": "Tag 1 – Arbeitszimmer – Unterkörper & Gesäss",
+   "title": "Montag – Arbeitszimmer – Unterkörper-Kraft & Stabilität",
    "items": [
     {
      "kind": "sub",
@@ -249,7 +256,7 @@
   },
   {
    "id": "tag2",
-   "title": "Tag 2 – Gartenraum – Cardio Zone 2",
+   "title": "Dienstag – Gartenraum – Cardio Zone 2",
    "items": [
     {
      "kind": "sub",
@@ -283,7 +290,7 @@
   },
   {
    "id": "tag3",
-   "title": "Tag 3 – Gartenraum – Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)",
+   "title": "Mittwoch – Gartenraum – Ganzkörper (Klimmzüge + Crosstrainer + Körpergewicht)",
    "items": [
     {
      "kind": "sub",
@@ -381,7 +388,7 @@
   },
   {
    "id": "tag4",
-   "title": "Tag 4 – Arbeitszimmer – Springseil-HIIT + Core",
+   "title": "Donnerstag – Arbeitszimmer – Springseil-HIIT + Core",
    "items": [
     {
      "kind": "sub",
@@ -458,7 +465,7 @@
   },
   {
    "id": "tag5",
-   "title": "Tag 5 – Arbeitszimmer – Oberkörper & Schultern",
+   "title": "Freitag – Arbeitszimmer – Oberkörper & Schultern",
    "items": [
     {
      "kind": "sub",
@@ -554,7 +561,7 @@
   },
   {
    "id": "tag6",
-   "title": "Tag 6 – Gartenraum – Crosstrainer-HIIT",
+   "title": "Samstag – Gartenraum – Crosstrainer-HIIT",
    "items": [
     {
      "kind": "sub",
@@ -596,7 +603,7 @@
   },
   {
    "id": "tag7",
-   "title": "Tag 7 – Ruhetag",
+   "title": "Sonntag – Ruhetag",
    "items": [
     {
      "kind": "text",

@@ -366,7 +366,7 @@ function tabLabel(s) {
   if (s.id === 'mob') return 'Mobilität';
   if (s.id === 'alltag') return 'Alltag';
   if (s.id === 'about') return 'About';
-  const m = s.id.match(/^tag(\d)$/); return m ? 'Tag ' + m[1] : s.title;
+  const m = s.id.match(/^tag(\d)$/); return m ? ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'][m[1] - 1] : s.title;
 }
 function showTab(id) {
   document.querySelectorAll('main section').forEach(s => s.classList.toggle('on', s.id === id));
@@ -396,7 +396,7 @@ function render(plan) {
   tbl.innerHTML = '<thead><tr><th>Tag</th><th>Raum</th><th>Schwerpunkt</th></tr></thead>';
   const tb = el('tbody');
   plan.overview.forEach(r => {
-    const tr = el('tr', null, `<td>${esc(r.tag)}</td><td>${esc(r.raum)}</td><td>${esc(r.fokus)}</td>`);
+    const tr = el('tr', null, `<td>${esc(r.name || r.tag)}</td><td>${esc(r.raum)}</td><td>${esc(r.fokus)}</td>`);
     tr.dataset.go = 'tag' + r.tag; tr.addEventListener('click', () => showTab(tr.dataset.go));
     tb.append(tr);
   });
