@@ -1,5 +1,7 @@
 # Trainingsplan
 
+[English](README.md) | **Deutsch**
+
 Ein persönlicher Heimtrainingsplan als kleine Web-App – mit eingebauten Timern, Übungsbildern und voller Offline-Unterstützung auf dem iPhone.
 
 **Live:** https://davekrn.github.io/trainingsplan/

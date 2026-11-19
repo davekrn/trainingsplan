@@ -343,7 +343,8 @@ function renderAbout(sec, lang) {
   const file = lang === 'de' ? 'README.de.md' : 'README.md';
   fetch(file)
     .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
-    .then(t => { sec.innerHTML = mdToHtml(t); })
+    .then(t => { // Sprachzeile für GitHub ausblenden – die App hat den E/D-Schalter
+      sec.innerHTML = mdToHtml(t.split('\n').filter(l => !/\]\(README(\.de)?\.md\)/.test(l)).join('\n')); })
     .catch(() => { sec.innerHTML = `<h2>About</h2><p>${file} konnte nicht geladen werden.</p>`; })
     .finally(() => {
       // Sprachwahl E/D rechts neben dem Titel

@@ -1,6 +1,6 @@
 {
  "title": "6-Tage-Trainingsplan – Fettabbau & Muskelerhalt",
- "version": 2,
+ "version": 3,
  "meta": [
   {
    "label": "Ziel",
@@ -19,7 +19,7 @@
     },
     {
      "label": "Arbeitszimmer",
-     "text": "Fitnessmatte, 2× 3-kg-Hanteln, Springseil, Yogagurt"
+     "text": "Fitnessmatte, Kettlebell 8 kg, 2× 3-kg-Hanteln, Springseil, Yogagurt"
     }
    ]
   }
@@ -28,7 +28,7 @@
   {
    "tag": "1",
    "raum": "Arbeitszimmer",
-   "fokus": "Unterkörper & Gesäss (Hanteln + Körpergewicht) + Mobilität"
+   "fokus": "Unterkörper & Gesäss (Kettlebell + Hanteln + Körpergewicht) + Mobilität"
   },
   {
    "tag": "2",
@@ -48,7 +48,7 @@
   {
    "tag": "5",
    "raum": "Arbeitszimmer",
-   "fokus": "Oberkörper & Schultern (Hanteln + Körpergewicht)"
+   "fokus": "Oberkörper & Schultern (Hanteln + Kettlebell + Körpergewicht)"
   },
   {
    "tag": "6",
@@ -170,7 +170,7 @@
    "items": [
     {
      "kind": "sub",
-     "text": "Hanteln + Körpergewicht"
+     "text": "Kettlebell + Hanteln + Körpergewicht"
     },
     {
      "kind": "item",
@@ -184,8 +184,8 @@
     },
     {
      "kind": "item",
-     "title": "1. Goblet-Kniebeuge – mit Hantel",
-     "text": "Halte beide 3-kg-Hanteln zusammen vor der Brust (Ellbogen zeigen nach unten). Stelle die Füsse schulterbreit, Fussspitzen leicht nach aussen. Setze dich langsam nach hinten-unten, als würdest du dich auf einen Stuhl setzen, bis die Oberschenkel etwa parallel zum Boden sind. Knie bleiben über den Fussspitzen, Rücken gerade. Beim Hochkommen kräftig durch die Fersen drücken. 3 Sätze à 12–15 Wiederholungen.",
+     "title": "1. Goblet-Kniebeuge – mit Kettlebell",
+     "text": "Halte die 8-kg-Kettlebell an den Griffseiten (Hörnern) dicht vor der Brust, Ellbogen zeigen nach unten. Stelle die Füsse schulterbreit, Fussspitzen leicht nach aussen. Setze dich langsam nach hinten-unten, als würdest du dich auf einen Stuhl setzen, bis die Oberschenkel etwa parallel zum Boden sind. Knie bleiben über den Fussspitzen, Rücken gerade. Beim Hochkommen kräftig durch die Fersen drücken. 3 Sätze à 10–12 Wiederholungen.",
      "img": "Bilder/k_goblet.png",
      "timer": {
       "type": "sets",
@@ -206,8 +206,8 @@
     },
     {
      "kind": "item",
-     "title": "3. Glute Bridge (Beckenheben) – Körpergewicht, optional mit Hantel",
-     "text": "Lege dich auf den Rücken, Knie angewinkelt, Füsse flach auf dem Boden. Drücke die Hüfte nach oben, bis Oberschenkel und Oberkörper eine Linie bilden, und spanne oben das Gesäss fest an. Langsam absenken. Zur Steigerung kannst du eine Hantel auf das Becken legen und mit den Händen halten. 3 Sätze à 15 Wiederholungen.",
+     "title": "3. Glute Bridge (Beckenheben) – Körpergewicht, optional mit Kettlebell",
+     "text": "Lege dich auf den Rücken, Knie angewinkelt, Füsse flach auf dem Boden. Drücke die Hüfte nach oben, bis Oberschenkel und Oberkörper eine Linie bilden, und spanne oben das Gesäss fest an. Langsam absenken. Zur Steigerung die Kettlebell auf das Becken legen und mit beiden Händen festhalten. 3 Sätze à 15 Wiederholungen.",
      "img": "Bilder/k_bridge.png",
      "timer": {
       "type": "sets",
@@ -462,7 +462,7 @@
    "items": [
     {
      "kind": "sub",
-     "text": "Hanteln + Körpergewicht"
+     "text": "Hanteln + Kettlebell + Körpergewicht"
     },
     {
      "kind": "item",
@@ -498,8 +498,8 @@
     },
     {
      "kind": "item",
-     "title": "3. Einarmiges Rudern – mit Hantel",
-     "text": "Schrittstellung: ein Bein vorn, leicht gebeugt, das andere hinten. Oberkörper mit geradem Rücken aus der Hüfte nach vorn neigen und die Hand der vorderen Seite auf dem vorderen Oberschenkel abstützen. Hantel in der freien Hand hängen lassen und eng am Körper nach oben zur Hüfte ziehen, Schulterblatt zurückführen, langsam ablassen. Alternative: statt auf dem Oberschenkel die Hand auf Schreibtischkante oder Fensterbrett abstützen. 3 Sätze à 12 pro Arm.",
+     "title": "3. Einarmiges Rudern – mit Kettlebell",
+     "text": "Schrittstellung: ein Bein vorn, leicht gebeugt, das andere hinten. Oberkörper mit geradem Rücken aus der Hüfte nach vorn neigen und die Hand der vorderen Seite auf dem vorderen Oberschenkel abstützen. Kettlebell in der freien Hand hängen lassen und eng am Körper nach oben zur Hüfte ziehen, Schulterblatt zurückführen, langsam ablassen. Alternative: statt auf dem Oberschenkel die Hand auf Schreibtischkante oder Fensterbrett abstützen. 3 Sätze à 10–12 pro Arm.",
      "img": "Bilder/k_row.png",
      "timer": {
       "type": "sets",
@@ -531,8 +531,8 @@
     },
     {
      "kind": "item",
-     "title": "6. Trizeps-Strecken über Kopf – mit Hantel",
-     "text": "Eine Hantel mit beiden Händen über dem Kopf halten, Ellbogen zeigen nach vorn. Unterarme hinter den Kopf absenken und wieder strecken. Oberarme ruhig halten. 3 Sätze à 12–15 Wiederholungen.",
+     "title": "6. Trizeps-Strecken über Kopf – mit Kettlebell",
+     "text": "Kettlebell mit beiden Händen an den Griffseiten (Hörnern) über dem Kopf halten, Boden der Kugel zeigt nach oben, Ellbogen zeigen nach vorn. Unterarme langsam hinter den Kopf absenken und wieder strecken. Oberarme ruhig halten, Bauch anspannen, kein Hohlkreuz. Falls zu schwer: zurück zur 3-kg-Hantel. 3 Sätze à 10–12 Wiederholungen.",
      "img": "Bilder/k_triceps.png",
      "timer": {
       "type": "sets",
