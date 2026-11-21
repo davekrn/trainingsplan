@@ -114,3 +114,18 @@ ul.meta b{ font-weight:600; }
 .about .lang{ display:inline-flex; gap:4px; flex-shrink:0; }
 .about .lang button{ min-width:2.4em; font-weight:600; }
 .about .lang button.on{ background:var(--accent); color:#fff; border-color:var(--accent); }
+
+/* Training erledigt (Ende Tages-Tab) + History */
+.donebar{ margin:22px 0 8px; }
+.b-hist{ width:100%; min-height:52px; padding:0 18px; font-weight:600; font-size:1.05rem;
+  background:var(--card); color:var(--fg); border:2px solid var(--ok); }
+.b-hist.done{ background:var(--ok); color:#fff; }
+.hint{ color:var(--muted); font-size:.85rem; margin:6px 0; }
+table.hist th,table.hist td{ text-align:center; padding:8px 4px; }
+table.hist th:first-child,table.hist td:first-child{ text-align:left; padding-left:10px; white-space:nowrap; }
+table.hist .from{ display:block; font-size:.75rem; color:var(--muted); font-weight:400; }
+table.hist td.ok{ color:var(--ok); font-weight:700; font-size:1.15rem; }
+table.hist td.now{ box-shadow:inset 0 0 0 2px var(--accent); }
+table.hist td.fut{ background:var(--bg); }
+.histbtns{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+@media print{ .donebar,.history{ display:none !important; } }

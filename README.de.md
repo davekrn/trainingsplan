@@ -16,6 +16,7 @@ Ein persönlicher Heimtrainingsplan als kleine Web-App – mit eingebauten Timer
 - **Bildschirm bleibt an** während des Trainings
 - **Bilder:** einfache Strichfiguren zu jeder Übung
 - **Druckansicht:** saubere Druckfassung über die Druckfunktion des Browsers
+- **History:** am Ende jedes Tages „Training erledigt“ antippen; der Tab *History* zeigt pro Woche eine Zeile (z. B. `W647` = Kalenderwoche 47/2026 nach ISO), neueste oben, mit Export/Import als JSON-Sicherungsdatei
 
 ## Technik
 
@@ -44,7 +45,7 @@ Die Seite ist eine **Progressive Web App (PWA)**. Einmal mit Internetverbindung 
 - Beim ersten Besuch installiert der Browser den **Service Worker** (`sw.js`).
 - Dieser speichert alle App-Dateien *und* jedes in `plan.json` verwendete Bild im **Cache Storage** des Browsers.
 - Danach wird jede Anfrage zuerst aus diesem lokalen Speicher beantwortet („cache first“); das Netz wird nur für noch nicht gespeicherte Dateien verwendet.
-- Persönliche Timer-Anpassungen liegen im `localStorage` des Browsers.
+- Persönliche Timer-Anpassungen und die Trainings-History liegen im `localStorage` des Browsers. Die App bittet den Browser um dauerhafte Speicherung, die Daten bleiben aber auf dem jeweiligen Gerät (Home-Bildschirm-App und Safari speichern getrennt) – zur Sicherung *History → Exportieren* verwenden.
 
 **Auf dem iPhone verwenden**
 

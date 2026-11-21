@@ -75,6 +75,112 @@ const store = {
   set(k, v) { try { localStorage.setItem('tp_' + k, JSON.stringify(v)); } catch (e) {} },
 };
 
+/* ---------- History: erledigte Trainingstage (localStorage, pro Datum) ---------- */
+const WD = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+const DAY = 864e5;
+const parseD = s => { const [y, m, d] = s.split('-').map(Number); return new Date(Date.UTC(y, m - 1, d)); };
+const fmtD = dt => dt.toISOString().slice(0, 10);                       // '2026-11-21'
+const dmy = dt => dt.getUTCDate() + '.' + (dt.getUTCMonth() + 1) + '.';   // '21.11.'
+const wdOf = dt => (dt.getUTCDay() + 6) % 7;                             // 0 = Montag
+function today() { const n = new Date(); return new Date(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate())); }
+function isoWeek(dt) {   // ISO 8601: Woche beginnt Montag, KW 1 enthält den 4. Januar
+  const t = new Date(dt.getTime() + (3 - wdOf(dt)) * DAY);   // Donnerstag derselben Woche
+  const y = t.getUTCFullYear();
+  return { y, w: 1 + Math.floor((t - Date.UTC(y, 0, 1)) / DAY / 7) };
+}
+const weekLabel = dt => { const k = isoWeek(dt); return 'W' + (k.y % 10) + String(k.w).padStart(2, '0'); };
+const hist = {
+  all() { const a = store.get('history', []); return Array.isArray(a) ? a : []; },
+  save(a) { store.set('history', [...new Set(a)].filter(x => /^\d{4}-\d{2}-\d{2}$/.test(x)).sort()); },
+  has(d) { return this.all().includes(d); },
+  toggle(d) { const a = this.all(); this.save(a.includes(d) ? a.filter(x => x !== d) : [...a, d]); },
+};
+// Datum zu einem Wochentag-Tab: der letzte solche Wochentag bis und mit heute
+function dateForWeekday(i) { const t = today(); return new Date(t.getTime() - ((wdOf(t) - i + 7) % 7) * DAY); }
+
+function buildDoneBar(i) {
+  const bar = el('div', 'donebar');
+  const b = el('button', 'b-hist'); b.type = 'button'; b.dataset.wd = i;
+  b.addEventListener('click', () => { hist.toggle(b.dataset.date); refreshDone(); });
+  bar.append(b, el('p', 'hint', 'Erneut tippen hebt die Markierung auf.'));
+  return bar;
+}
+function refreshDone() {
+  document.querySelectorAll('.b-hist').forEach(b => {
+    const dt = dateForWeekday(Number(b.dataset.wd)), d = fmtD(dt), done = hist.has(d);
+    b.dataset.date = d;
+    b.classList.toggle('done', done);
+    b.textContent = (done ? '✓ Training erledigt' : '○ Training erledigt?') + ` – ${WD[wdOf(dt)]} ${dmy(dt)}`;
+    b.setAttribute('aria-pressed', done);
+  });
+  const h = document.getElementById('history'); if (h && h.classList.contains('on')) renderHistory(h);
+}
+
+function renderHistory(sec) {
+  sec.innerHTML = '';
+  sec.append(el('h2', null, 'History'));
+  const set = new Set(hist.all()), t = today();
+  const mon = dt => new Date(dt.getTime() - wdOf(dt) * DAY);
+  const first = set.size ? mon(parseD([...set].sort()[0])) : mon(t);
+  const tbl = el('table', 'ov hist');
+  tbl.innerHTML = '<thead><tr><th>Woche</th>' + WD.map(w => `<th>${w}</th>`).join('') + '</tr></thead>';
+  const tb = el('tbody');
+  for (let m = mon(t); m >= first; m = new Date(m.getTime() - 7 * DAY)) {   // neueste Woche oben
+    let row = `<td><b>${weekLabel(m)}</b><span class="from">${dmy(m)}</span></td>`;
+    for (let i = 0; i < 7; i++) {
+      const dt = new Date(m.getTime() + i * DAY), d = fmtD(dt);
+      const cls = [set.has(d) ? 'ok' : '', d === fmtD(t) ? 'now' : '', dt > t ? 'fut' : ''].filter(Boolean).join(' ');
+      row += `<td class="${cls}">${set.has(d) ? '✓' : ''}</td>`;
+    }
+    tb.append(el('tr', null, row));
+  }
+  tbl.append(tb); sec.append(tbl);
+  if (!set.size) sec.append(el('p', 'hint', 'Noch keine Einträge. Am Ende jedes Tages-Tabs „Training erledigt“ antippen.'));
+
+  sec.append(el('h3', null, 'Sicherung'));
+  sec.append(el('p', 'hint', 'Die History liegt nur auf diesem Gerät (Home-Bildschirm-App und Safari getrennt). Gelegentlich exportieren, z. B. in iCloud Drive.'));
+  const bar = el('div', 'histbtns');
+  const ex = el('button', 'small', '⇪ Exportieren'); ex.type = 'button'; ex.addEventListener('click', exportHistory);
+  const im = el('button', 'small', '⇩ Importieren'); im.type = 'button';
+  const inp = el('input'); inp.type = 'file'; inp.accept = '.json,application/json'; inp.hidden = true;
+  im.addEventListener('click', () => inp.click());
+  inp.addEventListener('change', () => { if (inp.files[0]) importHistory(inp.files[0]); inp.value = ''; });
+  bar.append(ex, im, inp); sec.append(bar);
+  const st = el('p', 'hint', esc(histMsg)); st.id = 'histStatus'; sec.append(st);
+  const ps = el('p', 'hint'); sec.append(ps);
+  if (navigator.storage && navigator.storage.persisted) navigator.storage.persisted()
+    .then(p => { ps.textContent = 'Dauerhafte Speicherung: ' + (p ? 'gewährt' : 'nicht gewährt (Browser darf Daten bei Platzmangel löschen)'); })
+    .catch(() => {});
+}
+let histMsg = '';   // Meldung nach Import
+async function exportHistory() {
+  const data = { app: 'trainingsplan', type: 'history', format: 1, exported: new Date().toISOString(), dates: hist.all() };
+  const name = `trainingsplan-history-${fmtD(today())}.json`;
+  const blob = new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' });
+  try {
+    const file = new File([blob], name, { type: 'application/json' });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: name }); return; }
+  } catch (e) { if (e && e.name === 'AbortError') return; }
+  const a = el('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+}
+function importHistory(file) {
+  const st = () => document.getElementById('histStatus');
+  file.text().then(t => {
+    const j = JSON.parse(t);
+    const dates = (Array.isArray(j) ? j : j.dates || []).filter(x => typeof x === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(x));
+    if (!dates.length) throw new Error('leer');
+    const before = new Set(hist.all());
+    hist.save([...before, ...dates]);
+    const added = dates.filter(d => !before.has(d)).length;
+    histMsg = `Import: ${dates.length} Einträge gelesen, ${added} neu hinzugefügt.`;
+    renderHistory(document.getElementById('history')); refreshDone();
+  }).catch(() => { histMsg = 'Import fehlgeschlagen – keine gültige Sicherungsdatei.'; const s = st(); if (s) s.textContent = histMsg; });
+}
+// Browser bitten, die Daten nicht automatisch zu löschen (Safari ab iOS 17)
+try { if (navigator.storage && navigator.storage.persist) navigator.storage.persisted().then(p => p || navigator.storage.persist()).catch(() => {}); } catch (e) {}
+
 /* ---------- Phasen aus Timer-Konfiguration ---------- */
 // Phase: {label, sec (null = manuell), kind: 'work'|'rest', tick, count (3-2-1 am Ende), w (Widget)}
 function phasesFor(cfg, w, opts = {}) {
@@ -366,6 +472,7 @@ function tabLabel(s) {
   if (s.id === 'mob') return 'Mobilität';
   if (s.id === 'alltag') return 'Alltag';
   if (s.id === 'about') return 'About';
+  if (s.id === 'history') return 'History';
   const m = s.id.match(/^tag(\d)$/); return m ? ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'][m[1] - 1] : s.title;
 }
 function showTab(id) {
@@ -373,6 +480,8 @@ function showTab(id) {
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.id === id));
   const b = $(`#tabs button[data-id="${id}"]`); if (b) b.scrollIntoView({ inline: 'center', block: 'nearest' });
   window.scrollTo(0, 0);
+  refreshDone();   // Datum kann sich seit dem Start geändert haben (Mitternacht)
+  if (id === 'history') renderHistory(document.getElementById('history'));
   store.set('tab', id);
   if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
 }
@@ -419,8 +528,12 @@ function render(plan) {
         bar.append(b1, b2); sec.append(bar);
       }
     });
+    const tm = s.id.match(/^tag(\d)$/);
+    if (tm) sec.append(buildDoneBar(Number(tm[1]) - 1));
     main.append(sec);
   });
+  const history = el('section', 'history'); history.id = 'history';
+  main.append(history); secs.push({ id: 'history' });
   const about = el('section', 'about'); about.id = 'about';
   main.append(about); secs.push({ id: 'about' }); renderAbout(about);
   secs.forEach(s => {

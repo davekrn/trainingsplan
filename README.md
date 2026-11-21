@@ -16,6 +16,7 @@ A personal home-workout plan as a small web app – with built-in timers, exerci
 - **Screen stays on** during a workout
 - **Illustrations:** simple stick figures for each exercise
 - **Print view:** a clean printable version via the browser's print function
+- **History:** tap “Training done” at the end of each day; the *History* tab shows one row per week (e.g. `W647` = ISO week 47 of 2026), newest on top, with export/import as a JSON backup file
 
 ## Technology
 
@@ -44,7 +45,7 @@ The site is a **Progressive Web App (PWA)**. Once opened with an internet connec
 - On the first visit, the browser installs the **service worker** (`sw.js`).
 - It stores all app files *and* every image referenced in `plan.json` in the browser's **Cache Storage**.
 - From then on, every request is answered from this local cache first ("cache first"); the network is only used for files not yet stored.
-- Personal timer adjustments are kept in the browser's `localStorage`.
+- Personal timer adjustments and the training history are kept in the browser's `localStorage`. The app asks the browser for persistent storage, but the data stays on that one device (the home-screen app and Safari keep separate copies) – use *History → Export* for a backup.
 
 **Use it on the iPhone**
 

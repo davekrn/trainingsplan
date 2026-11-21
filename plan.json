@@ -1,6 +1,6 @@
 {
  "title": "6-Tage-Trainingsplan – Fettabbau & Muskelerhalt",
- "version": 3,
+ "version": 4,
  "meta": [
   {
    "label": "Ziel",
@@ -19,7 +19,7 @@
     },
     {
      "label": "Arbeitszimmer",
-     "text": "Fitnessmatte, Kettlebell 8 kg, 2× 3-kg-Hanteln, Springseil, Yogagurt"
+     "text": "Fitnessmatte, Kettlebell 8 kg, 2× 3-kg-Hanteln, Springseil, Yogagurt, TRX-Schlingentrainer"
     }
    ]
   }
@@ -131,8 +131,8 @@
     },
     {
      "kind": "item",
-     "title": "5. Kniende Hüftbeuger-Dehnung (Half-Kneeling Hip Flexor Stretch)",
-     "text": "Halbkniestand: ein Knie am Boden (weiche Unterlage), der andere Fuss steht vorn. Gesäss anspannen und das Becken leicht nach vorn schieben, Oberkörper aufrecht. Der Zug entsteht vorne an der Hüfte des hinteren Beins. 45 Sekunden pro Seite.",
+     "title": "5. Hüftbeuger- und Brustdehnung im Halbkniestand – mit TRX (Half-Kneeling Hip Flexor Stretch with TRX Chest Stretch)",
+     "text": "Rücken zum Anker des TRX, Gurte lang einstellen. Halbkniestand: ein Knie am Boden (weiche Unterlage), der andere Fuss steht vorn. Griffe fassen – im Knien etwa auf Schulterhöhe –, Arme seitlich-hinten gestreckt, Brust öffnen. Becken aufrichten, Gesäss anspannen und das Becken leicht nach vorn schieben, Oberkörper aufrecht – nicht ins Hohlkreuz. Der Zug entsteht vorne an der Hüfte des hinteren Beins sowie in Brust und Schultern. Der Abstand zum Anker bestimmt die Intensität der Brustdehnung: weiter vorn = stärker. Brustdehnung bei beiden Seiten mitmachen. 45 Sekunden pro Seite.",
      "img": "Bilder/05_hipflexor.png",
      "timer": {
       "type": "hold",
@@ -406,7 +406,7 @@
     },
     {
      "kind": "item",
-     "title": "Hauptteil – Springseil-Block (Seconds Pro)",
+     "title": "Hauptteil – Springseil-Block",
      "text": "40 Sekunden springen / 60 Sekunden Pause × 5 Runden. Springe in ruhigem, gleichmässigem Rhythmus, locker aus den Fussgelenken, Ellbogen nah am Körper. Wenn du dich am Seil verhedderst, einfach weitermachen – wichtig ist die Bewegungszeit. Steigerung: erst auf 6–8 Runden erhöhen, später die Pause auf 45 s verkürzen.",
      "img": "Bilder/k_rope.png",
      "timer": {
